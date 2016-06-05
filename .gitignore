@@ -1,9 +1,0 @@
-﻿################################################################################
-# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
-################################################################################
-
-/.vs/config/applicationhost.config
-/.vs/wako057.net/v14
-/wako057.net.sln
-/wako057.net/wako057.net.phpproj.user
-/wako057.net/wako057.net.phpproj
