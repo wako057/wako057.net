@@ -12,6 +12,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+//        phpinfo();
+//        exit;
         return $this->render('MainBundle:Default:index.html.twig');
     }
 
@@ -21,6 +23,8 @@ class DefaultController extends Controller
      */
     public function aboutAction()
     {
-        return $this->render('MainBundle:Default:about.html.twig');
+
+
+//        return $this->render('MainBundle:Default:about.html.twig');
     }
 }
