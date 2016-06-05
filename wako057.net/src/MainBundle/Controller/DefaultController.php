@@ -14,4 +14,13 @@ class DefaultController extends Controller
     {
         return $this->render('MainBundle:Default:index.html.twig');
     }
+
+
+    /**
+     * @Route("/about")
+     */
+    public function aboutAction()
+    {
+        return $this->render('MainBundle:Default:about.html.twig');
+    }
 }
