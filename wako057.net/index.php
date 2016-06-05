@@ -1,13 +1,8 @@
-<?php
-
-echo "Hello World!";
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Wako057.net</title>
-	<link href="/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="/css/main.css" rel="stylesheet" type="text/css"
 </head>
 
 <body>
