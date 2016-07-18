@@ -1,12 +1,9 @@
-<!doctype html>
-<html>
-<head>
-    <title>Wako057.net</title>
-</head>
+{# app/Resources/views/Default/index.html.twig #}
+{#{% extends 'layout.html.twig' %}#}
 
-<body>
-<h1>Another tech Blog...</h1>
-Mais je ne desespere pas d'y arriver
-</body>
-
-</html>
+{% block content %}
+    {% for entry in index_entries %}
+        <h2>{{ entry.title }}</h2>
+        <p>{{ entry.body }}</p>
+    {% endfor %}
+{% endblock %}
