@@ -2,13 +2,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Wako057.net{% endblock %}</title>
+
+
+    <title>Wako057</title>
+    <link rel="stylesheet" href="/css/main.css" />
 
 </head>
 <body>
-<div id="sidebar">
-    {% block sidebar %}
+{% block javascripts %}
+    <script src="{{ asset('js/main.js') }}"></script>
+
+{% endblock %}
+
+<div id="topbar">
+    {% block topbar %}
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/blog">Blog</a></li>
@@ -21,3 +28,4 @@
 </div>
 </body>
 </html>
+
