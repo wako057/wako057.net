@@ -24,19 +24,4 @@ class DefaultController extends Controller
 //        ]);
     }
 
-
-    /**
-     * @Route("/about", name="about")
-     */
-    public function aboutAction(Request $request)
-    {
-        return $this->render('AppBundle:Default:about.html.twig');
-//        return new Response(
-//            '<html><body>Hello World</body></html>'
-//        );
-        // replace this example code with whatever you need
-//        return $this->render('default/index.html.twig', [
-//            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
-//        ]);
-    }
 }

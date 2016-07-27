@@ -1,9 +1,18 @@
-{# app/Resources/views/Default/index.html.twig #}
-{#{% extends 'layout.html.twig' %}#}
+{# src/Resources/views/Default/index.html.twig #}
+{% extends 'base.html.twig' %}
 
-{% block content %}
-    {% for entry in index_entries %}
-        <h2>{{ entry.title }}</h2>
-        <p>{{ entry.body }}</p>
-    {% endfor %}
+{% block title %}My index {% endblock %}
+
+
+
+{% block body %}
+
+    <h2> on est dans l'index</h2>azeaze
+
+
+    azeaze
+    {#{% for entry in blog_entries %}#}
+        {#<h2>{{ entry.title }}</h2>#}
+        {#<p>{{ entry.body }}</p>#}
+    {#{% endfor %}#}
 {% endblock %}

@@ -1,4 +1,4 @@
-{# app/Resources/views/Default/base.html.twig #}
+{# src/Resources/views/base.html.twig #}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,14 +6,10 @@
     <title>{% block title %}Test Application{% endblock %}</title>
 </head>
 <body>
-<div id="sidebar">
-    {% block sidebar %}
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
-        </ul>
-    {% endblock %}
-</div>
+
+{% block header %}
+    {% include '::header.html.twig' %}
+{% endblock %}
 
 <div id="content">
     {% block body %}{% endblock %}
