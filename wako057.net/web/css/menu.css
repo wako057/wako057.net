@@ -175,3 +175,23 @@ footer {
     }
 
 }
+
+.header__icon {
+
+    position: relative;
+    display: block;
+    float: right;
+    width: 50px;
+    height: 66px;
+    cursor: pointer; }
+
+.header__icon:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 0;
+    top: 16px;
+    left: 15px;
+    box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+
