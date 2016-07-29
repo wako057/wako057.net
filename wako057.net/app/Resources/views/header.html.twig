@@ -1,16 +1,31 @@
 {# app/Resources/views/header.html.twig #}
 
-<ul class="topnav" id="myTopnav">
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
-    <li class="icon">
-        <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
-    </li>
-</ul>
+{#<ul class="topnav" id="myTopnav">#}
+    {#<li><a class="active" href="{{ path('homepage') }}">Home</a></li>#}
+    {#<li><a href="#">News</a></li>#}
+    {#<li><a href="{{ path('about') }}">About</a></li>#}
+    {#<li class="icon">#}
+        {#<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>#}
+    {#</li>#}
+{#</ul>#}
 
-<div style="padding-left:16px">
-    <h2>Responsive Topnav Example</h2>
-    <p>Resize the browser window to see how it works.</p>
-</div>
+{#<div style="padding-left:16px">#}
+    {#<h2>Responsive Topnav Example</h2>#}
+    {#<p>Resize the browser window to see how it works.</p>#}
+{#</div>#}
+
+
+
+        <header class="header">
+            <a href="#" class="header__icon" id="header__icon"></a>
+            <a href="{{ path('homepage') }}"  class="header__logo">Home</a>
+            <nav class="menu">
+
+                <a href="{{ path('homepage') }}">Home</a>
+                <a href="{{ path('about') }}">About</a>
+            </nav>
+        </header>
+
+        {#<div class="site-cache" id="site-cache">#}
+        {#</div>#}
+
