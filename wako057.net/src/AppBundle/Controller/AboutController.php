@@ -1,21 +1,23 @@
 <?php
-
+// src/AppBundle/Controller/AboutController.php
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-class DefaultController extends Controller
-{
+
+class AboutController extends Controller {
+
     /**
-     * @Route("/", name="homepage")
+     * Matches /about exactly
+     *
+     * @Route("/about")
      */
     public function indexAction(Request $request)
     {
-        return $this->render('AppBundle:Default:index.html.twig');
+        return $this->render('AppBundle:Default:about.html.twig');
     }
-
-
 
 }

@@ -6,7 +6,7 @@ use Symfony\Component\Debug\Debug;
 // If you don't want to setup permissions the proper way, just uncomment the following PHP line
 // read http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup
 // for more information
-//umask(0000);
+umask(0000);
 
 // This check prevents access to debug front controllers that are deployed by accident to production servers.
 // Feel free to remove this, extend it, or make something more sophisticated.
@@ -14,6 +14,7 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
     || isset($_SERVER['HTTP_X_FORWARDED_FOR'])
     || !(in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', 'fe80::1', '::1',
             '90.79.167.66',
+            '80.12.91.84',
             '2a01:cb00:490:ea00:f89a:ed77:b5c7:7e5e']) || php_sapi_name() === 'cli-server')
 ) {
     header('HTTP/1.0 403 Forbidden');

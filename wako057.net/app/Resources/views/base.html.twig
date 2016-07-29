@@ -3,7 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="/css/main.css">
+        {% endblock %}
+
+        {% block javascriptsHeader %}
+            <script src="/js/main.js" type="application/javascript" ></script>
+        {% endblock %}
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
@@ -16,6 +23,9 @@
         {% block footer %}
             {% include '::footer.html.twig' %}
         {% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% block javascriptsBody %}
+            <script src="/js/main.js" type="application/javascript" />
+        {% endblock %}
     </body>
 </html>
