@@ -1,31 +1,18 @@
-{# app/Resources/views/Default/base.html.twig #}
+{# src/Resources/views/base.html.twig #}
 <!DOCTYPE html>
 <html>
 <head>
-
-
-    <title>Wako057</title>
-    <link rel="stylesheet" href="/css/main.css" />
-
+    <meta charset="UTF-8">
+    <title>{% block title %}Test Application{% endblock %}</title>
 </head>
 <body>
-{% block javascripts %}
-    <script src="{{ asset('js/main.js') }}"></script>
 
+{% block header %}
+    {% include '::header.html.twig' %}
 {% endblock %}
-
-<div id="topbar">
-    {% block topbar %}
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
-        </ul>
-    {% endblock %}
-</div>
 
 <div id="content">
     {% block body %}{% endblock %}
 </div>
 </body>
 </html>
-
