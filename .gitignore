@@ -1,0 +1,14 @@
+
+/.idea/*
+Supprimerait .idea/workspace.xml
+/.idea/deployment.xml
+/.idea/compiler.xml
+/.idea/misc.xml
+/.idea/symfony2.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/wako057.net.iml
+/.idea/webServers.xml
+/.idea/workspace.xml
+/.idea/dictionaries/greg.xml
+/.idea/copyright/profiles_settings.xml

@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block header %}
-            {% include '::header.html.twig' %}
-        {% endblock %}
-        {% block body %}{% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {#<meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="/css/base.css">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/menu.css">
+    {% endblock %}
+
+    {% block javascriptsHeader %}
+        <script src="/js/main.js" type="application/javascript" ></script>
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body >
 
 
-        {% block footer %}
-            {% include '::footer.html.twig' %}
-        {% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+{#<div class="site-container">#}
+    {#<div class="site-pusher">#}
+{% block header %}
+    {% include '::header.html.twig' %}
+{% endblock %}
+
+
+
+        {#<div class="site-content">#}
+            {#<div class="container">#}
+
+{% block body %}{% endblock %}
+
+
+
+{% block footer %}
+    {% include '::footer.html.twig' %}
+{% endblock %}
+            {#</div>#}
+        {#</div>#}
+
+    {#</div>#}
+{#</div>#}
+
+{% block javascriptsBody %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/menu.js" type="application/javascript" ></script>
+{% endblock %}
+</body>
 </html>
