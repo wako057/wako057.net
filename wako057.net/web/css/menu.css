@@ -5,20 +5,18 @@ ul {
 
 ul {
     list-style: disc;
-    padding: 0 0 0 20px;
+    /*padding: 0 0 0 1.2em;*/
 }
 
 a {
     color: #1D745A;
 }
 
-h1 {
-
-}
+h1 {  }
 
 h2 {
     font-family: 'PT Serif', serif;
-    font-size: 32px;
+    font-size: 2em;
     line-height: 1.4em;
     margin: 0 0 .4em;
     font-weight: bold;
@@ -31,15 +29,15 @@ h2 {
 
 article {
     border-bottom: 1px solid #d8d8d8;
-    padding: 10px 20px 0 20px;
-    margin: 10px 0;
+    padding: 0.4em 1.2em 0 1.2em;
+    margin: .6em 0;
 }
 
 /*header*/
 
 header {
     background: #1c1c1c;
-    padding: 15px 20px;
+    padding: 1em 1.4em;
 }
 
 /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
@@ -63,8 +61,8 @@ h1.logo a {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 20px;
-    line-height: 22px;
+    font-size: 0.6em;
+    line-height: 1.2em;
     float: left;
     letter-spacing: 0.2em;
 }
@@ -74,11 +72,11 @@ a.to_nav {
     color: #fff;
     background: #4e4e4e;
     text-decoration: none;
-    padding: 0 10px;
-    font-size: 12px;
+    padding: 0 .6em;
+    font-size: 0.8em;
     font-weight: bold;
-    line-height: 22px;
-    height: 22px;
+    line-height: 1.85em;
+    height: 1.8em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     -webkit-border-radius: 2px;
@@ -96,12 +94,12 @@ a.to_nav:focus {
 #primary_nav ul {
     list-style: none;
     background: #1c1c1c;
-    padding: 5px 0;
+    padding: .4em 0;
 }
 
 #primary_nav li a {
     display: block;
-    padding: 0 20px;
+    padding: 0 1.4em;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -122,6 +120,18 @@ a.to_nav:focus {
     color: #1c1c1c;
     background: #ccc;
 }
+aside {
+    height:100%;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    transform: translateX(-100%);
+    float:left;
+}
+.with--sidebar{
+    transform: translateX(0);
+    transition: 300ms cubic-bezier(0.23, 1, .32, 1);
+}
 
 /*pied de page*/
 
@@ -130,68 +140,65 @@ footer {
     font-family: Roboto;
     font-style: italic;
     text-align: center;
-    font-size: 14px;
+    font-size: 1em;
 }
 
+@media only screen and (max-width: 768px) {
 
-@media only screen and (min-width: 768px) {
-
-    a.to_nav {
-        display: none;
-    }
-
+    /*#lateral_nav {*/
+        /*display: none;*/
+    /*}*/
 }
+/*@media only screen and (min-width: 768px) {*/
 
-@media only screen and (min-width: 768px) {
+    /*a.to_nav {*/
+        /*display: none;*/
+    /*}*/
 
-    a.to_nav {
-        display: none;
-    }
+    /*.wrapper {*/
+        /*position: relative;*/
+        /*width: 768px;*/
+        /*margin: auto;*/
+    /*}*/
 
-    .wrapper {
-        position: relative;
-        width: 768px;
-        margin: auto;
-    }
+    /*#primary_nav {*/
+        /*position: absolute;*/
+        /*top: 5px;*/
+        /*right: 10px;*/
+        /*background: none;*/
+    /*}*/
 
-    #primary_nav {
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        background: none;
-    }
+    /*#primary_nav li {*/
+        /*display: inline;*/
+    /*}*/
 
-    #primary_nav li {
-        display: inline;
-    }
+    /*#primary_nav li a {*/
+        /*float: left;*/
+        /*border: none;*/
+        /*padding: 0 10px;*/
+        /*-webkit-border-radius: 2px;*/
+        /*-moz-border-radius: 2px;*/
+        /*border-radius: 2px;*/
+    /*}*/
 
-    #primary_nav li a {
-        float: left;
-        border: none;
-        padding: 0 10px;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-    }
+/*}*/
 
-}
+/*.header__icon {*/
 
-.header__icon {
+    /*position: relative;*/
+    /*display: block;*/
+    /*float: right;*/
+    /*width: 50px;*/
+    /*height: 66px;*/
+    /*cursor: pointer; }*/
 
-    position: relative;
-    display: block;
-    float: right;
-    width: 50px;
-    height: 66px;
-    cursor: pointer; }
-
-.header__icon:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 1rem;
-    height: 0;
-    top: 16px;
-    left: 15px;
-    box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+/*.header__icon:after {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*display: block;*/
+    /*width: 1rem;*/
+    /*height: 0;*/
+    /*top: 16px;*/
+    /*left: 15px;*/
+    /*box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }*/
 

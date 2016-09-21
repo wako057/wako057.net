@@ -7,7 +7,7 @@ use Symfony\Component\Debug\Debug;
 // read http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup
 // for more information
 //umask(0000);
-
+//print_r($_SERVER);exit;
 // This check prevents access to debug front controllers that are deployed by accident to production servers.
 // Feel free to remove this, extend it, or make something more sophisticated.
 if (isset($_SERVER['HTTP_CLIENT_IP'])
@@ -15,8 +15,12 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
     || !(in_array(@$_SERVER['REMOTE_ADDR'], array(
                                             '127.0.0.1',
                                             '80.12.91.84',
+                                            '86.242.17.253', // maison
                                             '83.114.79.31',   //chris
-                                            'fe80::1', '::1')) || php_sapi_name() === 'cli-server')
+                                            'fe80::1', '::1',
+                                            '90.79.167.66',
+
+            )) || php_sapi_name() === 'cli-server')
 ) {
     header('HTTP/1.0 403 Forbidden');
     exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');

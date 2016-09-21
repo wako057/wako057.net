@@ -22,17 +22,23 @@
 
 {#<div class="site-container">#}
     {#<div class="site-pusher">#}
+
+
 {% block header %}
     {% include '::header.html.twig' %}
 {% endblock %}
 
+{% block lateral %}
+    {% include '::lateral.html.twig' %}
+{% endblock %}
 
 
         {#<div class="site-content">#}
             {#<div class="container">#}
-
-{% block body %}{% endblock %}
-
+<section id="mainbody">
+{% block body %}
+{% endblock %}
+</section>
 
 
 {% block footer %}
