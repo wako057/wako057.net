@@ -37,7 +37,7 @@ h2 {
 /*header*/
 header {
     background: #1c1c1c;
-    padding: 1em 1.4em;
+    /*padding: 1em 1em;*/
 }
 header:before,
 header:after {
@@ -47,27 +47,6 @@ header:after {
 header:after {
     clear:both;
 }
-
-
-.header { position: static; }
-
-/* L'icône hamburger, en utilisant le box-shadow */
-.header__icon {
-    position: relative;
-    display: block;
-    float: left;
-    width: 50px;
-    height: 66px;
-    cursor: pointer; }
-.header__icon:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 1rem;
-    height: 0;
-    top: 16px;
-    left: 15px;
-    box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
 
 
 /*pied de page*/
@@ -89,16 +68,113 @@ aside {
 section {
 }
 
-.container {
-    height: 100%;
-    overflow: hidden;
-    /*height: 100%;*/
-    /*width:100%;*/
-    /*clear: both;*/
+article {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0.4em 1.2em 0 1.2em;
+    margin: .6em 0;
 }
 
-.site-pusher, .site-container { height: 100%; }
-.site-pusher {
-    transition-duration: 0.3s;
-    transform: translateX(0px);
+
+.container {
+    min-height: 450px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu > ul{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none;
+}
+.menu > ul > li > a {display: block;padding: 1em;text-decoration: none;text-align: center}
+.menu > ul > li > a {
+    color: #898989;
+    /*background: #4e4e4e;*/
+    text-decoration: none;
+    margin: 0 .6em;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.2em;
+    /*height: 1.2em;*/
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.menu > ul > li > a:hover,
+.menu > ul > li > a:focus {
+    color: #1c1c1c;
+    background: #ccc;
+}
+
+/*@media only screen and (min-width: 750px) {*/
+    .menu {padding-top: 1em}
+/*}*/
+@media only screen and (max-width: 750px) {
+
+    .site-pusher, .site-container { height: 100%; }
+    .site-container { overflow: hidden; min-height: 450px}
+    .site-pusher {
+        transition-duration: 0.3s;
+        transform: translateX(0px);
+    }
+    .header { position: static; }
+
+    /* L'icône hamburger, en utilisant le box-shadow */
+    .header__icon {
+        position: relative;
+        display: block;
+        float: left;
+        width: 50px;
+        height: 66px;
+        cursor: pointer; }
+
+    .header__icon:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1rem;
+        height: 0;
+        top: 16px;
+        left: 15px;
+        box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        padding-top:6em;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        background-color: #1c1c1c;
+        width: 12em;
+        transform: translateX(-12em);
+
+    }
+    .menu > ul{
+        display:flex;
+        flex-flow: column wrap;
+        -webkit-padding-start: 0px;
+        -moz-padding-start: 0px;
+    }
+    .menu > ul > li {border-bottom: 1px solid #555555;}
+
+
+    /* animation css */
+    .with--sidebar .site-pusher {
+        transform: translateX(12em);
+    }
+    /* On met un cache par dessus le site-content pour bloquer le scroll et permettre le retour au site */
+    .with--sidebar .site-cache {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
 }

@@ -1,53 +1,5 @@
 
-
-/*layout*/
-
-.wrapper {
-}
-
-article {
-    border-bottom: 1px solid #d8d8d8;
-    padding: 0.4em 1.2em 0 1.2em;
-    margin: .6em 0;
-}
-
-
 /* Le menu collé à gauche est masqué grâce à un transform */
-.menu {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    padding-top:6em;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    background-color: #1c1c1c;
-    width: 12em;
-    transform: translateX(-12em);
-
-}
-/* Un lien par ligne */
-.menu a {
-    display: block;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    border-bottom: 1px solid #555555;
-}
-
-/* Toujours dans le @media */
-.with--sidebar .site-pusher {
-    transform: translateX(12em);
-}
-/* On met un cache par dessus le site-content pour bloquer le scroll et permettre le retour au site */
-.with--sidebar .site-cache {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-}
 
 /*h1.logo a {*/
     /*color: #d8d8d8;*/
@@ -125,23 +77,3 @@ article {
     /*}*/
 
 /*}*/
-
-/*.header__icon {*/
-
-    /*position: relative;*/
-    /*display: block;*/
-    /*float: right;*/
-    /*width: 50px;*/
-    /*height: 66px;*/
-    /*cursor: pointer; }*/
-
-/*.header__icon:after {*/
-    /*content: '';*/
-    /*position: absolute;*/
-    /*display: block;*/
-    /*width: 1rem;*/
-    /*height: 0;*/
-    /*top: 16px;*/
-    /*left: 15px;*/
-    /*box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }*/
-
