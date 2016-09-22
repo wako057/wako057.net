@@ -3,10 +3,31 @@
 
 <header id="header">
 
-    <h1 class="logo"><a href="{{ path('homepage') }}">Home</a></h1>
+    {#<h1 class="logo"><a href="{{ path('homepage') }}">Menu</a></h1>#}
+
+    <a href="#" class="header__icon" id="header__icon"></a>
 
 
-    <a class="to_nav" href="#primary_nav">Menu</a>
+
+    <nav class="menu">
+
+        <ul>
+
+            <li><a href="{{ path('homepage') }}">Home</a></li>
+
+            <li><a href="#">Articles</a></li>
+
+            <li><a href="{{ path('about') }}">About</a></li>
+
+
+        </ul>
+
+    </nav>
+
+
+
+    {#<a class="to_nav" >Home</a>#}
+
 
 
     {#<a href="#" class="header__icon" id="header__icon"></a>#}

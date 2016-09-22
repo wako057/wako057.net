@@ -7,6 +7,98 @@
     /*color:#FAFAFA;*/
 /*}*/
 
-.mainbody{
-    float:left;
+/*.mainbody{*/
+    /*float:left;*/
+/*}*/
+
+p,
+ul {
+    margin: 0 0 1.5em;
+}
+
+ul {
+    list-style: disc;
+    /*padding: 0 0 0 1.2em;*/
+}
+
+a {
+    color: #1D745A;
+}
+
+h1 {  }
+
+h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 2em;
+    line-height: 1.4em;
+    margin: 0 0 .4em;
+    font-weight: bold;
+}
+/*header*/
+header {
+    background: #1c1c1c;
+    padding: 1em 1.4em;
+}
+header:before,
+header:after {
+    content:"";
+    display:table;
+}
+header:after {
+    clear:both;
+}
+
+
+.header { position: static; }
+
+/* L'icône hamburger, en utilisant le box-shadow */
+.header__icon {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 66px;
+    cursor: pointer; }
+.header__icon:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 0;
+    top: 16px;
+    left: 15px;
+    box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+
+
+/*pied de page*/
+footer {
+    /*font-family: 'PT Serif', serif;*/
+    font-family: Roboto;
+    font-style: italic;
+    text-align: center;
+    font-size: 1em;
+    clear: both;
+}
+
+
+
+aside {
+
+}
+
+section {
+}
+
+.container {
+    height: 100%;
+    overflow: hidden;
+    /*height: 100%;*/
+    /*width:100%;*/
+    /*clear: both;*/
+}
+
+.site-pusher, .site-container { height: 100%; }
+.site-pusher {
+    transition-duration: 0.3s;
+    transform: translateX(0px);
 }
