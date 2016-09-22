@@ -60,7 +60,6 @@ footer {
 }
 
 
-
 aside {
 
 }
@@ -139,7 +138,20 @@ article {
         height: 0;
         top: 16px;
         left: 15px;
-        box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+        box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
+    }
+
+    .site-content {
+        position: static;
+        top: 0px; /* La hauteur du header */
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding-top: 0;
+        overflow-y: scroll;
+        /*-webkit-overflow-scrolling: touch; !* Inertie sur iOS *!*/
+    }
+
 
     .menu {
         position: absolute;
